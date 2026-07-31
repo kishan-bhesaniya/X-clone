@@ -4,10 +4,18 @@ a {
     font-size: 15px;
 }
 
+.main {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+.as-wraper{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
 .header ul {
     display: flex;
     justify-content: center;
-    gap: 15px;
 }
 
 .header li {
@@ -36,7 +44,7 @@ a {
     position: absolute;
     width: 100%;
     height: 2px;
-    bottom: -4px;
+    bottom: -19px;
     left: 0;
     background-color: blue;
     transform: scaleX(0);
@@ -54,7 +62,7 @@ a {
     transform: scaleX(1);
 }
 
-.sidebar {
+.left-sidebar {
     width: 72px;
     height: 100vh;
     display: flex;
@@ -79,6 +87,21 @@ a {
 }
 
 .nav-item {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1px;
+    color: #0f1419;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: rgba(15, 20, 25, 0.1);
+}
+
+.as-nav {
     width: 50px;
     height: 50px;
     display: flex;
@@ -90,11 +113,12 @@ a {
     transition: background-color 0.2s;
 }
 
-.nav-item:hover {
+
+.as-nav:hover {
     background-color: rgba(15, 20, 25, 0.1);
 }
 
-.nav-item svg {
+.as-nav svg {
     width: 26px;
     height: 26px;
 }
@@ -102,14 +126,12 @@ a {
 .post-btn {
     width: 52px;
     height: 52px;
-    background-color: #0f1419;
     color: #ffffff;
     border: none;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 16px;
     cursor: pointer;
     transition: background-color 0.2s;
 }
@@ -130,4 +152,30 @@ a {
     border-radius: 50%;
     margin-top: auto;
     cursor: pointer;
+}
+
+
+.search-container {
+    display: flex;
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.search-container input {
+    padding: 12px 20px 12px 45px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 50px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 16px;
+    pointer-events: none;
 }
