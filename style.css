@@ -245,10 +245,6 @@ a {
     cursor: pointer;
 }
 
-.right-side {
-    max-width: 340px;
-}
-
 .search-container {
     position: sticky;
     top: 0;
@@ -286,6 +282,13 @@ a {
     height: 160px;
     padding: 6px 20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
+}
+
+.right-side-wraper {
+    /* position: sticky; */
+    top: 0;
+    z-index: 999;
+    height: 100vh;
 }
 
 .premium-card h1 {
@@ -578,7 +581,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     resize: none;
-    padding-top: 15px;  
+    padding-top: 15px;
     background-color: transparent;
     overflow-y: hidden;
 }
@@ -653,4 +656,100 @@ body {
 .nav-menu1 .as-nav1:hover svg {
     transform: scale(1.25);
     opacity: 1;
+}
+
+/* Tweet */
+
+.tweet {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    border-bottom: 1px solid rgb(239, 243, 244);
+    border-right: 1px solid rgb(239, 243, 244);
+    background: #fff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.tweet:hover {
+    background: #f7f7f7;
+}
+
+.tweet-profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tweet-content {
+    flex: 1;
+}
+
+.tweet-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.tweet-name {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.verified {
+    width: 18px;
+    height: 18px;
+}
+
+.tweet-id,
+.tweet-time,
+.tweet-dot {
+    color: #536471;
+    font-size: 14px;
+}
+
+.tweet-text {
+    margin-top: 6px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #0f1419;
+}
+
+.tweet-image {
+    margin-top: 12px;
+}
+
+.tweet-image img {
+    width: 100%;
+    border-radius: 18px;
+    border: 1px solid rgb(207, 217, 222);
+}
+
+.tweet-actions {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: #536471;
+    font-size: 14px;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #71767b;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.action svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.action:hover {
+    color: #1d9bf0;
 }
