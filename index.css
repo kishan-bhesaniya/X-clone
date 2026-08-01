@@ -78,11 +78,11 @@ a {
     display: grid;
     grid-template-columns: 180px 1fr;
     width: 100%;
-    gap: 30px;
 }
 
 .main-content {
     width: 100%;
+
 }
 
 .as-wraper {
@@ -99,6 +99,9 @@ a {
 
 .header ul {
     display: flex;
+    border-bottom: 1px solid rgb(239, 243, 244);
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 12px;
 }
 
 .header li {
@@ -128,6 +131,8 @@ a {
 }
 
 .left-sidebar {
+    padding-left: 8px;
+    padding-right: 8px;
     height: fit-content;
     position: sticky;
     top: 0;
@@ -213,6 +218,10 @@ a {
     background-color: #272c30;
 }
 
+.post-btn:last-child:hover {
+    background-color: rgba(15, 20, 25, 0.1);
+}
+
 .post-btn path {
     fill: #ffffff;
 }
@@ -220,6 +229,11 @@ a {
 .post-btn svg {
     width: 24px;
     height: 24px;
+}
+
+.post-btn:last-child {
+    margin-top: 32px;
+    margin-bottom: 12px;
 }
 
 .profile-avatar {
@@ -537,4 +551,84 @@ body {
 
 .copyright:hover {
     color: #353d43;
+}
+
+.post-wraper {
+    padding-left: 12px;
+    padding-right: 12px;
+    border-bottom: 1px solid rgb(230, 233, 234);
+    border-right: 1px solid rgb(230, 233, 234);
+}
+
+.post-img {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.post-img img {
+    max-width: 7%;
+}
+
+.post-img textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    resize: none;
+    background-color: transparent;
+}
+
+.nav-menu1 {
+    display: flex;
+    margin-left: 50px;
+    gap: 4px;
+}
+
+.as-nav1 {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: rgb(130, 154, 171);
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.post-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+}
+
+.post-btn1 {
+    background-color: #cccccc;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 7px 18px;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-menu1 svg {
+    opacity: 0.6;
+    height: 20px;
+    width: 20px;
+
+}
+
+.nav-menu1:hover {
+    opacity: 0.9;
+}
+
+.nav-menu1 .as-nav1:hover {
+    background-color: rgba(15, 20, 25, 0.1);
+    opacity: 0.9;
+    transform: scale(1.2)
 }
