@@ -578,7 +578,9 @@ body {
     font-size: 16px;
     font-weight: 400;
     resize: none;
+    padding-top: 15px;  
     background-color: transparent;
+    overflow-y: hidden;
 }
 
 .nav-menu1 {
