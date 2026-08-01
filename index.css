@@ -62,30 +62,33 @@ body {
     overflow-x: clip;
 }
 
-a:hover,
-a:focus,
-a:active {
-    color: #FFFFFF;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p,
+a {
     font-weight: 400;
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: "poppins", sans-serif;
 }
 
 .main {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 180px 1fr;
+    width: 100%;
+    gap: 30px;
+}
+
+.main-content {
+    width: 100%;
 }
 
 .as-wraper {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 600px 320px;
+    gap: 30px;
 }
 
 .header {
@@ -96,50 +99,32 @@ h6 {
 
 .header ul {
     display: flex;
-    justify-content: center;
 }
 
 .header li {
     list-style: none;
 }
 
+.header li:active {
+    border-bottom: 2px solid rgb(29, 155, 240);
+}
+
 .header .nav-item a {
-    padding: 16px 16px;
+    padding: 20px 32px;
     font-size: 15px;
     font-weight: 400;
     line-height: 100%;
     color: #0F1419;
-    transition: none;
+    transition: 0.4s ease-in-out;
 }
 
-
-.header .nav-item a {
-    position: relative;
-    text-decoration: none;
-    color: inherit;
-    transition: font-weight 0.3s ease;
-}
-
-.header .nav-item a::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: rgb(29, 155, 240);
-    transform: scaleX(0);
-    transform-origin: bottom left;
-    transition: transform 0.3s ease-out;
-}
-
-.header .nav-item a:active,
 .header .nav-item a:hover {
-    font-weight: 500;
+    font-weight: 600;
 }
 
-.header .nav-item a:active::after,
-.header .nav-item a:hover::after {
-    transform: scaleX(1);
+.header .nav-item:last-child a {
+    padding: 17px;
+    border-radius: 100%;
 }
 
 .left-sidebar {
@@ -152,8 +137,12 @@ h6 {
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    font-family: sans-serif;
     border-right: 1px solid #eff3f4;
+    margin-left: auto;
+}
+
+.nav-menu a:active {
+    fill: #000000;
 }
 
 .logo {
@@ -174,11 +163,15 @@ h6 {
     justify-content: center;
     color: #0f1419;
     text-decoration: none;
-    transition: background-color 0.2s;
 }
 
-.nav-item:hover {
+.nav-item a:hover {
     background-color: rgba(15, 20, 25, 0.1);
+}
+
+.nav-item:last-child:hover {
+    border: none;
+    transition: 0.2s ease-in-out;
 }
 
 .as-nav {
@@ -206,18 +199,22 @@ h6 {
 .post-btn {
     width: 52px;
     height: 52px;
-    color: #ffffff;
     border: none;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #000000;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .post-btn:hover {
     background-color: #272c30;
+}
+
+.post-btn path {
+    fill: #ffffff;
 }
 
 .post-btn svg {
@@ -249,7 +246,7 @@ h6 {
 
 .search-container input {
     margin-top: 6px;
-    padding: 12px 100px 12px 45px;
+    padding: 12px 93px 12px 45px;
     font-size: 16px;
     border: 1px solid #ced4da;
     border-radius: 50px;
@@ -286,9 +283,9 @@ h6 {
 
 .premium-card p {
     font-size: 15px;
-    line-height: 1.4;
+    line-height: 1.2;
     font-weight: 400;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
 }
 
 .subscribe-btn {
@@ -332,7 +329,8 @@ h6 {
 }
 
 .trend-item:hover {
-    background-color: var(--bg-hover);
+    background-color: rgb(247, 247, 247);
+
 }
 
 .trend-header {
@@ -484,9 +482,9 @@ body {
     background-color: rgb(15, 20, 25);
     color: rgb(255, 255, 255);
     border: none;
-    border-radius: 9999px;
+    border-radius: 100px;
     padding: 0 16px;
-    height: 36px;
+    height: 34px;
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
@@ -495,4 +493,48 @@ body {
 
 .follow-btn:hover {
     opacity: 0.9;
+}
+
+.footer-container {
+    padding: 20px;
+    box-sizing: border-box;
+    padding-bottom: 64px;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: #eff3f4;
+    margin-bottom: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px 7px;
+    font-size: 13px;
+    color: #536471;
+    line-height: 1.5;
+}
+
+.footer-links a {
+    font-size: 11px;
+    color: #536471;
+}
+
+.footer-links a:hover {
+    color: #353d43;
+    text-decoration: underline black;
+}
+
+.bullet-separator {
+    color: #536471;
+    font-size: 15px;
+    user-select: none;
+}
+
+.copyright:hover {
+    color: #353d43;
 }
