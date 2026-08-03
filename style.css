@@ -711,6 +711,11 @@ textarea::placeholder {
     font-weight: 700;
 }
 
+.tweet-name:hover {
+    text-decoration: underline;
+    transition: 0.4s ease-in-out;
+}
+
 .verified {
     width: 20px;
     height: 20px;
@@ -763,12 +768,19 @@ textarea::placeholder {
     border: 1px solid rgb(207, 217, 222);
 }
 
-.tweet-actions {
-    margin-top: 12px;
+.action-wraper1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 82px;
     color: #536471;
     font-size: 14px;
+}
+
+.tweet-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #536471;
 }
 
 .action {
@@ -790,10 +802,17 @@ textarea::placeholder {
     color: #1d9bf0;
 }
 
-.action:nth-child(2):hover {
+.action-wraper1 .action:nth-child(2):hover {
     color: #1df044;
 }
 
 .action:nth-child(3):hover {
     color: #f01d91;
+}
+
+.action-wraper {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-right: 10px;
 }
