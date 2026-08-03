@@ -60,6 +60,7 @@ body {
     line-height: 26px;
     color: #000000;
     overflow-x: clip;
+    background-color: rgb(247, 249, 249);
 }
 
 h1,
@@ -285,10 +286,10 @@ a {
 }
 
 .right-side-wraper {
-    /* position: sticky; */
+    position: sticky;
     top: 0;
     z-index: 999;
-    height: 100vh;
+    height: 180vh;
 }
 
 .premium-card h1 {
@@ -567,23 +568,30 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 20px;
 }
 
 .post-img img {
-    max-width: 7%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .post-img textarea {
     width: 100%;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     resize: none;
-    padding-top: 15px;
+    padding-top: 22px;
     background-color: transparent;
     overflow-y: hidden;
+}
+
+textarea::placeholder {
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .nav-menu1 {
@@ -619,6 +627,11 @@ body {
     border: none;
     border-radius: 50px;
     transition: background-color 0.2s ease;
+}
+
+.post-btn1:hover {
+    background-color: #0f1419;
+    cursor: pointer;
 }
 
 .nav-menu1 {
@@ -663,7 +676,7 @@ body {
 .tweet {
     display: flex;
     gap: 12px;
-    padding: 16px;
+    padding: 12px;
     border-bottom: 1px solid rgb(239, 243, 244);
     border-right: 1px solid rgb(239, 243, 244);
     background: #fff;
@@ -676,8 +689,8 @@ body {
 }
 
 .tweet-profile img {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -690,7 +703,7 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .tweet-name {
@@ -699,8 +712,25 @@ body {
 }
 
 .verified {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
+}
+
+.tw-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: rgb(130, 154, 171);
+    text-decoration: none;
+    transition: background-color 0.2s;
+    opacity: 0.6;
+}
+
+.tw-icon:hover {
+    fill: #1d9bf0;
 }
 
 .tweet-id,
@@ -715,6 +745,12 @@ body {
     font-size: 15px;
     line-height: 1.6;
     color: #0f1419;
+}
+
+.tw-hd-wraper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .tweet-image {
@@ -752,4 +788,12 @@ body {
 
 .action:hover {
     color: #1d9bf0;
+}
+
+.action:nth-child(2):hover {
+    color: #1df044;
+}
+
+.action:nth-child(3):hover {
+    color: #f01d91;
 }
